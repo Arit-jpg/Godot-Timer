@@ -5,9 +5,9 @@ var time_left = 30
 @onready var timer = $Timer
 
 func _ready():
-	message.text = str(time_left)  # Display initial time
-	timer.wait_time = 1  # Make timer tick every second
-	timer.start()  # Start countdown
+	message.text = str(time_left)  
+	timer.wait_time = 1  
+	timer.start()  
 	
 func show_message(text):
 	$Message.text = text

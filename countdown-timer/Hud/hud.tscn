@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyrkxvb46vbvi"]
+
+[ext_resource type="Script" path="res://Hud/hud.gd" id="1_uc223"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qp7nh"]
+font_size = 40
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_uc223")
+
+[node name="Message" type="Label" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 174.0
+offset_top = -27.0
+offset_right = 365.0
+offset_bottom = 28.0
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Time Left:"
+label_settings = SubResource("LabelSettings_qp7nh")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_time_timeout"]

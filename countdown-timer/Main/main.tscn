@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c52wl4foenlq4"]
+
+[ext_resource type="Script" path="res://Main/main.gd" id="1_kybqu"]
+[ext_resource type="Texture2D" uid="uid://boaagvosqdqpl" path="res://OIP (8).jpg" id="2_bhjld"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_kybqu")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 158.0
+offset_top = 587.0
+offset_right = 506.0
+offset_bottom = 755.0
+icon = ExtResource("2_bhjld")
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
